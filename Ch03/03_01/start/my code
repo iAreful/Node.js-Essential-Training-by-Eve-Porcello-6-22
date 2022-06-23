@@ -1,0 +1,45 @@
+const path = require("path");
+console.log(path.basename(__filename))
+// mycode.js
+const dirUploads = path.join(
+  __dirname,
+  "www",
+  "files",
+  "uploads"
+);
+console.log(dirUploads);
+//C:~\www\files\uploads
+
+
+
+const util = require("util");
+
+// console.log(path.basename(__filename));
+// const dirUploads = path.join(
+//   __dirname,
+//   "www",
+//   "files",
+//   "uploads"
+// );
+// util.log(dirUploads);
+util.log(path.basename(__filename));
+//23 Jun 14:31:49 - mycode.js
+
+
+const v8 = require("v8");
+util.log(v8.getHeapStatistics());
+/*
+23 Jun 14:32:32 - {
+  total_heap_size: 4931584,
+  total_heap_size_executable: 524288,
+  total_physical_size: 4931584,
+  total_available_size: 2150533744,
+  used_heap_size: 4146288,
+  heap_size_limit: 2153775104,
+  malloced_memory: 254064,
+  peak_malloced_memory: 123200,
+  does_zap_garbage: 0,
+  number_of_native_contexts: 1,
+  number_of_detached_contexts: 0
+}
+*/
